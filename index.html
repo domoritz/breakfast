@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Friday morning breakfast</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <style>
+        body {
+            font-size: 12pt;
+            font-family: sans-serif;
+        }
+        .content {
+            display: grid;
+            max-width: 960px;
+            margin: 0 auto;
+        }
+        .row {
+            display: flex;
+            flex-direction: row;
+            margin: -16px;
+        }
+        .column {
+            flex: 1;
+            padding: 16px;
+        }
+        .column.no-title {
+            padding-top: 80px;
+        }
+        .flex-1 {
+            flex: 1;
+        }
+        .flex-2 {
+            flex: 2;
+        }
+        iframe {
+            border-width: 0;
+        }
+
+        @media (max-width: 600px) {
+            .row {
+                flex-direction: column;
+            }
+            .column.no-title {
+                padding-top: 0;
+            }
+        }
+        </style>
+    </head>
+    <body>
+        <div class="content">
+            <h1>Friday Morning Breakfast!!</h1>
+
+            <div class="row">
+                <div class="column flex-2">
+                    <h2>Upcoming Breakfasts <small><a href="https://goo.gl/BdOI7K" target="_blank">Open calendar</a></small></h2>
+                    <iframe src="https://calendar.google.com/calendar/b/1/embed?src=cs.washington.edu_rs49k1fe4dbcd6oo74ot2dr8ac@group.calendar.google.com&ctz=America/Los_Angeles&showTitle=0&showNav=0&showDate=0&showPrint=0&showTabs=0&showCalendars=0&showTz=0&mode=AGENDA" width="100%" height="200" scrolling="no"></iframe>
+                    <p>
+                        <a href="https://goo.gl/BdOI7K" target="_blank">Open calendar</a> or <a href="https://goo.gl/E4Hy7Y" target="_blank"> subscribe to the breakfast calendar</a>.
+                    </p>
+                </div>
+                <div class="column no-title flex-1">
+                    Contact Dominik (domoritz@cs) about general friday breakfast concerns, or issues with this website.
+                </div>
+                <div class="column no-title flex-1">
+                    <a href="http://www.google.com/images?q=breakfast+cat">
+                        <img src="http://t3.gstatic.com/images?q=tbn:96VfE_7hc34kKM:http://wouldyoulikeafrywiththat.com/wp-content/uploads/2009/10/funny-pictures-kitten-sleeps-food-bowl.jpg&t=1">
+                    </a>
+                    
+                </div>
+            </div>
+            
+            <h2>Sign up to bring breakfast <small><a href="https://docs.google.com/spreadsheets/d/1ofQZCbGJSaHsGjG5v7QOjtN1ksHD_tYIrw0HC17NKP8">Open the full spreadsheet</a></small></h2>
+            <p>To sign up for friday breakfst, add your name and email to the spreadsheet below. You can comma separate multiple email addresses. Our breakfast bot will remind you and send you some helpful suggestions.</p>
+
+            <iframe src="https://docs.google.com/spreadsheets/d/1ofQZCbGJSaHsGjG5v7QOjtN1ksHD_tYIrw0HC17NKP8/edit?rm=minimal" width="100%", height="500px"></iframe>    
+            
+            <p>
+                <a href="https://docs.google.com/spreadsheets/u/1/d/1ofQZCbGJSaHsGjG5v7QOjtN1ksHD_tYIrw0HC17NKP8/pub?gid=0&single=true&range=A1:C&output=pdf">Printable sheet</a>
+            </p>
+        </div>
+    </body>
+</html>
