@@ -31,14 +31,14 @@ function sendReminder() {
         var subject = templates.getRange('B3').getValue();
         var message = fillInTemplateFromObject(templates.getRange('C3').getValue(), {name: name});
         Logger.log('Emailing %s the day before', email)
-        //MailApp.sendEmail(email, subject, message);
+        MailApp.sendEmail(email, subject, message);
         break;
         
-      case 5:
+      case 4:
         var subject = templates.getRange('B2').getValue();
         var message = fillInTemplateFromObject(templates.getRange('C2').getValue(), {name: name});
         Logger.log('Emailing %s the week before with %s', email, message)
-        //MailApp.sendEmail(email, subject, message);
+        MailApp.sendEmail(email, subject, message);
         break;
     }
   }
