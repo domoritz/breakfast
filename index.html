@@ -5,15 +5,24 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <style>
+        body, html {
+            width: 100%;
+            margin: 0;
+        }
+        html {
+            -ms-text-size-adjust: 100%;
+            -webkit-text-size-adjust: 100%;
+        }
         body {
             font-size: 12pt;
             font-family: sans-serif;
             color: #333;
+            box-sizing: border-box;
         }
         .content {
-            display: grid;
             max-width: 960px;
             margin: 0 auto;
+            padding: 14px;
         }
         .row {
             display: flex;
@@ -62,6 +71,10 @@
         @media (max-width: 600px) {
             .row {
                 flex-direction: column;
+                margin: 0;
+            }
+            .column {
+                padding: 0;
             }
             .column.no-title {
                 padding-top: 0;
