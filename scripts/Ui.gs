@@ -7,8 +7,6 @@ function onOpen() {
                   .addItem('Copy past dates', 'copyToPast')
                   .addItem('Sync calendar', 'syncCalendar'))
       .addToUi();
-  
-  showSidebar();
 }
 
 function insertEmail() {
