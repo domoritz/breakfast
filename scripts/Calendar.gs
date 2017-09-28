@@ -9,12 +9,22 @@ function syncCalendar() {
   
   var data = dataRange.getValues();
   
-  var earliestDate = new Date();
+  var earliestDate = null;
   for (i=1; i<data.length; i++) {  // skip headers
     var date = data[i][0];
-    if (date < earliestDate) {
+    
+    if (!date) {
+      continue;
+    }
+    
+    if (earliestDate == null || date < earliestDate) {
       earliestDate = date;
     }
+  }
+  
+  if (earliestDate == null) {
+    Logger.log('Nobody has signed up yet.');
+    return;
   }
   
   Logger.log('Earliest date: %s', earliestDate);
@@ -72,6 +82,7 @@ function syncCalendar() {
     
     if (!event) {
       event = calendar.createEvent(title, startTime, endTime);
+      event.setDescription('Edit at https://breakfast.cs.washington.edu and subscribe at https://goo.gl/BdOI7K.');
       row[5] = event.getId();
     }
     
@@ -85,7 +96,6 @@ function syncCalendar() {
     }
     
     event.setLocation(location + ' in Paul G. Allen Center');
-    event.setDescription('Edit at https://breakfast.cs.washington.edu and subscribe at https://goo.gl/BdOI7K.')
   }
   
   // write updated information back
