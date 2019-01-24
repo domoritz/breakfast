@@ -1,6 +1,6 @@
 # Friday breakfast for CSE
 
-This is the code to manage Friday breakfast at UW CSE.
+This is the code to manage Friday breakfast at UW CSE. The code is deployed from `/cse/web/community/breakfast`. 
 
 ## Features
 
